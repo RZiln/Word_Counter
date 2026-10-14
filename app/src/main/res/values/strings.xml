@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Word Counter</string>
+    <string name="empty_input">Enter text</string>
+<!--    giga chatgpiti up here-->
+
     <string-array name="options">
         <item>Sentences</item>
         <item>Words</item>

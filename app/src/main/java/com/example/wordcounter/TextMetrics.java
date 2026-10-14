@@ -4,10 +4,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TextMetrics {
-    private static String Sentences = "\\."; // chatgptd this
-    private static String words = "\\s+";
-    private static String Punctuation = "[ ,. ]";
-    private static String Numbers = "\\d+";
+    private static final String Sentences   = "[^.!?\\s][^.!?]*(?:[.!?]+|$)";
+    private static final String Words       = "\\S+";
+    private static final String Punctuation = "\\p{Punct}";
+    private static final String Numbers     = "\\d+";
+//    chatgptd this
 
     public int countSentences(String text) {
         String trim = text.trim();
@@ -52,6 +53,14 @@ public class TextMetrics {
         }
 
         return count;
+    }
+
+    public int countWords(String text){
+        String trim = text.trim();
+        if (trim.isEmpty()){
+            return 0;
+        }
+        return trim.split(Words).length;
     }
 
 }
