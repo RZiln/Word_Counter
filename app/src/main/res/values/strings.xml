@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Word Counter</string>
+    <string-array name="options">
+        <item>Sentences</item>
+        <item>Words</item>
+        <item>Punctuation</item>
+        <item>Numbers</item>
+        <item>All</item>
+    </string-array>
+</resources>
