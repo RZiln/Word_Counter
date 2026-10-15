@@ -65,21 +65,21 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Selected Choice: "+ choice);
         switch(choice) {
             case 0:
-                result = spinner.getSelectedItem().toString()+ " " + textMetrics.countSentences(input);
+                result = spinner.getSelectedItem().toString()+ " " + textMetrics.countSENTENCES(input);
                 break;
             case 1:
-                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countWords(input);
+                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countWORDS(input);
                 break;
             case 2:
-                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countPunctuation(input);
+                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countPUNCTUATION(input);
                 break;
             case 3:
-                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countNumbers(input);
+                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countNUMBERS(input);
                 break;
             case 4:
 //                all
 
-                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countNumbers(input);
+                result = spinner.getSelectedItem().toString()+ " " +textMetrics.countNUMBERS(input);
             default:
                 result = "Nothing";
                 break;

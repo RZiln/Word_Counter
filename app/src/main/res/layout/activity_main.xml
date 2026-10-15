@@ -19,7 +19,7 @@
         android:layout_height="160dp"
         android:gravity="top|start"
         android:hint="Enter text here"
-        android:inputType="textMultiLine|textCapSentences"
+        android:inputType="textMultiLine|textCapSENTENCES"
         android:padding="12dp" />
 
     <Spinner

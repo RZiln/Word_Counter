@@ -4,20 +4,20 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TextMetrics {
-    private static final String Sentences   = "[^.!?\\s][^.!?]*(?:[.!?]+|$)";
-    private static final String Words       = "\\S+";
-    private static final String Punctuation = "\\p{Punct}";
-    private static final String Numbers     = "\\d+";
+    private static final String SENTENCES   = "[^.!?\\s][^.!?]*(?:[.!?]+|$)";
+    private static final String WORDS       = "\\S+";
+    private static final String PUNCTUATION = "\\p{Punct}";
+    private static final String NUMBERS     = "\\d+";
 //    chatgptd this
 
-    public int countSentences(String text) {
+    public int countSENTENCES(String text) {
         String trim = text.trim();
 
         if (trim.isEmpty()) {
             return 0;
         }
 
-        Matcher matcher = Pattern.compile(Sentences).matcher(trim);
+        Matcher matcher = Pattern.compile(SENTENCES).matcher(trim);
 
         int count = 0;
 
@@ -29,7 +29,7 @@ public class TextMetrics {
 
     }
 
-    public int countPunctuation(String text){
+    public int countPUNCTUATION(String text){
         int count = 0;
 
         for (int i = 0; i < text.length(); i++){
@@ -43,8 +43,8 @@ public class TextMetrics {
         return count;
     }
 
-    public int countNumbers(String text){
-        Matcher matcher = Pattern.compile(Numbers).matcher(text);
+    public int countNUMBERS(String text){
+        Matcher matcher = Pattern.compile(NUMBERS).matcher(text);
 
         int count = 0;
 
@@ -55,12 +55,12 @@ public class TextMetrics {
         return count;
     }
 
-    public int countWords(String text){
+    public int countWORDS(String text){
         String trim = text.trim();
         if (trim.isEmpty()){
             return 0;
         }
-        return trim.split(Words).length;
+        return trim.split(WORDS).length;
     }
 
 }

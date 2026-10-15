@@ -3,10 +3,10 @@
 <!--    giga chatgpiti up here-->
 
     <string-array name="options">
-        <item>Sentences</item>
-        <item>Words</item>
-        <item>Punctuation</item>
-        <item>Numbers</item>
+        <item>SENTENCES</item>
+        <item>WORDS</item>
+        <item>PUNCTUATION</item>
+        <item>NUMBERS</item>
         <item>All</item>
     </string-array>
 </resources>
